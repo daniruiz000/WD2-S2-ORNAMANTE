@@ -1,0 +1,343 @@
+@charset "UTF-8";
+/* Reseteamos los margin y paddings de todas las etiquetas */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+/* Evitamos problemas con las imagenes */
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* opcional */
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* opcional */
+  -o-object-position: center center;
+     object-position: center center;
+}
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* ... excepto los que se encuentran en párrafos */
+p a {
+  display: inline;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+}
+
+/* Reseteamos las tablas */
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/*FONTS*/
+@font-face {
+  font-family: "Monserrat";
+  src: url(./assets/fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: "Monserrat-light";
+  src: url(./assets/fonts/Montserrat-Light.ttf);
+  font-weight: light;
+}
+/* Configuramos la tipografía para toda la web */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: "Monserrat-light";
+}
+
+.header {
+  margin: 20px 20px 100px 20px;
+  padding: 0;
+  max-width: 100%;
+}
+.header__idiomas {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: end;
+  align-items: normal;
+  font-size: 14px;
+  font-weight: normal;
+  text-decoration: none;
+  text-align: center;
+  font-style: none;
+  margin: 20px 0;
+  padding: 0;
+}
+.header__idiomas a {
+  margin: 0 10px;
+  padding: 0;
+}
+.header__container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+.header__list-container {
+  display: none;
+}
+.header__list {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__item a {
+  font-size: 18px;
+  font-weight: bolder;
+  text-decoration: none;
+  text-align: none;
+  font-style: none;
+  margin: 0 10px;
+  padding: 0;
+}
+.header__logo {
+  margin: 0 20px;
+  padding: 0;
+  width: 60%;
+}
+.header__bars {
+  margin: 0 20px;
+  padding: 0;
+  width: 4%;
+}
+.header__bag {
+  margin: 0 20px;
+  padding: 0;
+  width: 4%;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) { /*Portatil*/
+  .header__idiomas {
+    font-size: normal;
+    font-weight: normal;
+    text-decoration: none;
+    text-align: end;
+    font-style: none;
+    margin: 20px;
+    padding: 0;
+  }
+  .header__logo {
+    width: 30%;
+  }
+  .header__list-container {
+    display: block;
+  }
+  .header__icon {
+    display: none;
+  }
+}
+@media screen and (min-width: 1280px) { /*Full Screen*/
+  .header__idiomas {
+    font-size: normal;
+    font-weight: normal;
+    text-decoration: none;
+    text-align: end;
+    font-style: none;
+    margin: 20px;
+    padding: 0;
+  }
+  .header__logo {
+    width: 30%;
+  }
+  .header__list-container {
+    display: block;
+  }
+  .header__icon {
+    display: none;
+  }
+}
+.portada {
+  width: 100%;
+}
+
+.product {
+  display: inline-block;
+  margin: 20px;
+  padding: 0;
+}
+.product__img {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 0;
+}
+.product__name {
+  font-size: 25px;
+  font-weight: normal;
+  text-decoration: none;
+  text-align: none;
+  font-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
+.product__description {
+  font-size: 15px;
+  font-weight: normal;
+  text-decoration: none;
+  text-align: none;
+  font-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) { /*Tablet*/
+  .product {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1279px) { /*Portatil*/
+  .product {
+    width: 28%;
+  }
+}
+@media screen and (min-width: 1280px) { /*Full Screen*/
+  .product {
+    width: 20%;
+  }
+}
+.bipedos {
+  margin: 120px 0 0 0;
+  padding: 0;
+  font-size: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-align: center;
+  font-style: none;
+  display: inline-block;
+  width: 100%;
+}
+.bipedos__title {
+  font-size: 40px;
+  font-weight: light;
+  text-decoration: none;
+  text-align: center;
+  font-style: none;
+}
+
+.otros-productos {
+  margin: 120px 0 0 0;
+  padding: 0;
+  font-size: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-align: center;
+  font-style: none;
+  display: inline-block;
+  width: 100%;
+}
+.otros-productos__title {
+  font-size: 40px;
+  font-weight: light;
+  text-decoration: none;
+  text-align: center;
+  font-style: none;
+}
+
+.footer {
+  margin: 90px 0 0 0;
+  padding: 0;
+}
+.footer__container {
+  margin: 0 0 30px 0;
+  padding: 0;
+  display: none;
+}
+.footer__column-list {
+  display: inline;
+}
+.footer__title {
+  font-size: 18px;
+  font-weight: normal;
+  text-decoration: none;
+  text-align: none;
+  font-style: none;
+  margin: 15px 0;
+  padding: 0;
+}
+.footer__link {
+  font-size: 14px;
+  font-weight: normal;
+  text-decoration: none;
+  text-align: none;
+  font-style: none;
+  line-height: 20px;
+}
+.footer__copyright {
+  color: grey;
+  background-color: transparent;
+  font-size: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-align: center;
+  font-style: none;
+  margin: 0;
+  padding: 10px;
+  border-top: 1px solid lightgray;
+}
+.footer__link a {
+  color: grey;
+  background-color: transparent;
+}
+
+@media screen and (min-width: 1024px) { /*Portatil*/
+  .footer__container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+}/*# sourceMappingURL=main.css.map */

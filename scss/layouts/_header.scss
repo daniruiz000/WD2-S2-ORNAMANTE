@@ -1,0 +1,78 @@
+.header{
+    @include spaceling(20px 20px 100px 20px);
+    max-width: 100%;
+    &__idiomas{
+        @include flex($justify-content:end);
+        @include text-as(14px, $text-align:center);
+        @include spaceling(20px 0);
+    }
+    &__idiomas a{
+        @include spaceling(0 10px);
+    }
+    &__container{
+        @include flex($justify-content: space-between, $align-items: center);
+        @include spaceling(0 auto);
+        width: 100%;
+    }
+    &__list-container{
+        display: none;
+    }
+    &__list {
+        @include flex ($justify-content: space-between, $align-items: center);
+    }
+    &__item a{
+        @include text-as(18px, bolder);
+        @include spaceling(0 10px);
+    }
+    &__logo{
+        @include spaceling(0 20px);
+        width: 60%;
+    }
+    &__bars{
+        @include spaceling(0 20px);
+        width: 4%;
+    }
+    &__bag{
+        @include spaceling(0 20px);
+        width: 4%;
+    }
+}
+
+
+        
+@media screen and (min-width:1024px) and (max-width:1279px){        /*Portatil*/         
+    .header{
+        &__idiomas{
+            @include text-as($text-align:end);
+            @include spaceling(20px);
+        }
+        &__logo{
+            width: 30%;
+        }
+        &__list-container{
+            display: block;
+        }
+        &__icon{
+            display: none;
+        }
+    }
+}
+        
+@media screen and (min-width:1280px){                               /*Full Screen*/
+    .header{               
+        &__idiomas{
+            @include text-as($text-align:end);
+            @include spaceling(20px);
+        }
+        &__logo{
+            width: 30%;
+        }
+        &__list-container{
+            display: block;
+        }
+        &__icon{
+            display: none;
+        }
+    } 
+}
+

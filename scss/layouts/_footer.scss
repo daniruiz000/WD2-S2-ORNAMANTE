@@ -1,0 +1,38 @@
+
+.footer{
+    @include spaceling(90px 0 0 0);
+    &__container{
+        @include spaceling(0 0 30px 0);
+        display: none;
+    }
+    &__column-list{
+        display: inline;
+    }
+    &__title{
+        @include text-as(18px);
+        @include spaceling(15px 0);
+    }
+    &__link{
+        @include text-as(14px);
+        line-height: 20px;
+    }
+    &__copyright{
+        @include colorized(grey);
+        @include text-as($text-align:center);
+        @include spaceling(0, 10px);
+        border-top: 1px solid lightgray;
+    }
+    &__link a{
+        @include colorized(grey);
+    }
+} 
+        
+@media screen and (min-width:1024px) {        /*Portatil*/         
+    .footer{
+        &__container{
+            @include flex($justify-content:space-around, $align-items:center);
+            width: 100%;
+        }
+    }
+}
+        

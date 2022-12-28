@@ -1,0 +1,9 @@
+.otros-productos{
+    @include spaceling(120px 0 0 0);
+    @include text-as($text-align: center);
+    display: inline-block;
+    width: 100%;
+    &__title{
+        @include text-as(40px, light, $text-align: center);
+    }    
+}

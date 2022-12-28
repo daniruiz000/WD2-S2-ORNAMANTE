@@ -1,0 +1,36 @@
+.product{
+    display: inline-block;
+    @include spaceling(20px);
+    &__img{
+        max-width: 80%;
+        @include spaceling(0 auto);
+    }
+    &__name{
+        @include text-as(25px);
+        @include spaceling(0 auto);
+    }
+    &__description{
+        @include text-as(15px);
+        @include spaceling(0 auto);
+    }
+}
+
+
+@media screen and (min-width:768px) and (max-width:1023px){         /*Tablet*/    
+    .product{
+        width: 40%;
+    }
+}
+        
+        
+@media screen and (min-width:1024px) and (max-width:1279px){        /*Portatil*/         
+    .product{
+        width: 28%;
+    }
+}
+        
+@media screen and (min-width:1280px){                               /*Full Screen*/
+    .product{
+        width: 20%;
+    }
+}
