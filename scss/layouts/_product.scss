@@ -13,24 +13,13 @@
         @include text-as(15px);
         @include spaceling(0 auto);
     }
-}
-
-
-@media screen and (min-width:768px) and (max-width:1023px){         /*Tablet*/    
-    .product{
+    @include media-querys(768px){
         width: 40%;
     }
-}
-        
-        
-@media screen and (min-width:1024px) and (max-width:1279px){        /*Portatil*/         
-    .product{
+    @include media-querys(1024px){
         width: 28%;
     }
-}
-        
-@media screen and (min-width:1280px){                               /*Full Screen*/
-    .product{
+    @include media-querys(1280px){
         width: 20%;
     }
-}
+}      

@@ -3,7 +3,7 @@
     max-width: 100%;
     &__idiomas{
         @include flex($justify-content:end);
-        @include text-as(14px, $text-align:center);
+        @include text-as(14px);
         @include spaceling(20px 0);
     }
     &__idiomas a{
@@ -38,16 +38,7 @@
         @include text-as(60px);
         width: 10%;
     }
-}
-
-
-        
-@media screen and (min-width:1024px) and (max-width:1279px){        /*Portatil*/         
-    .header{
-        &__idiomas{
-            @include text-as($text-align:end);
-            @include spaceling(20px);
-        }
+    @include media-querys(1024px){
         &__logo{
             width: 30%;
         }
@@ -59,22 +50,5 @@
         }
     }
 }
-        
-@media screen and (min-width:1280px){                               /*Full Screen*/
-    .header{               
-        &__idiomas{
-            @include text-as($text-align:end);
-            @include spaceling(20px);
-        }
-        &__logo{
-            width: 30%;
-        }
-        &__list-container{
-            display: block;
-        }
-        &__icon{
-            display: none;
-        }
-    } 
-}
+
 

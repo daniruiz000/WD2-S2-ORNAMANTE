@@ -22,3 +22,8 @@
     text-align: $text-align;
     font-style: $font-style;
 }
+@mixin media-querys($screen){
+    @media screen and (min-width:$screen) {
+        @content;
+    }
+}

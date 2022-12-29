@@ -25,14 +25,11 @@
     &__link a{
         @include colorized(grey);
     }
-} 
-        
-@media screen and (min-width:1024px) {        /*Portatil*/         
-    .footer{
+    @include media-querys(1024px){
         &__container{
             @include flex($justify-content:space-around, $align-items:center);
             width: 100%;
         }
     }
-}
+} 
         
